@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Games</title>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #d4ff3e;
+            display: inline-block;
+        }
+        p {
+            color: #ccc;
+        }
+        .thumbnail {
+            width: 70px;/* زيادة حجم الصور */
+            height: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .btn-container {
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.5s ease;
+        }
+        .btn:hover::before {
+            left: 100%;
+        }
+        .btn img {
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+            opacity: 0.8;
+        }
+        .btn-apk {
+            background: linear-gradient(135deg, #a4c639, #6bbf59);
+            box-shadow: 0 0 10px #6bbf59, 0 0 20px #6bbf59;
+        }
+        .btn-ios {
+            background: linear-gradient(135deg, #6bbf59, #3399ff);
+            box-shadow: 0 0 10px #3399ff, 0 0 20px #3399ff;
+        }
+        .btn-install {
+            background: linear-gradient(135deg, #ff3333, #cc0000);
+            box-shadow: 0 0 10px #ff3333, 0 0 20px #ff3333;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        .image-gallery img {
+            width: 90%;/* زيادة حجم الصور */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .modal .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            transition: background 0.3s ease;
+        }
+        .modal .close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .modal:target {
+            display: flex;
+        }
+        .article-container {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: #111;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            text-align: left;
+        }
+        .article-container h2 {
+            color: #d4ff3e;
+        }
+    </style>
+<link rel="me" href="https://www.blogger.com/profile/01346904356366767412" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<link rel="me" href="https://www.blogger.com/profile/01346904356366767412" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+<body>
+    <!-- الصورة المصغرة -->
+    <img src="https://i.ibb.co/5T8jnB0/230x0w.webp" alt="Game Thumbnail" class="thumbnail">
+    
+    <h1>Stardew Valley</h1>
+    <p>Download the following games to your device</p>
+    
+    <div class="btn-container">
+        <a href="https://installchecker.com/cl/i/o6k364" target="_blank" class="btn btn-apk">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/32px-Android_robot.svg.png" alt="Android">
+            Download APK
+        </a>
+        <a href="https://example.com/ios-download" target="_blank" class="btn btn-ios">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/32px-Apple_logo_black.svg.png" alt="iOS">
+            Download iOS
+        </a>
+        <a href="https://youtu.be/j4MDwOEm2GU?si=MDiy6mxKcStHlIq-" target="_blank" class="btn btn-install">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/32px-YouTube_icon_%282013-2017%29.png" alt="YouTube">
+            How to Install
+        </a>
+    </div>
+
+    <!-- الصور المستطيلة -->
+    <div class="image-gallery">
+        <a href="#modal1"><img src="https://i.ibb.co/zFNNDCf/download.webp" alt="Game Screenshot 1"></a>
+        <a href="#modal2"><img src="https://i.ibb.co/R2Hh118/images-4.jpg" alt="Game Screenshot 2"></a>
+    </div>
+
+    <!-- نافذة منبثقة -->
+    <div id="modal1" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.ibb.co/zFNNDCf/download.webp" alt="Game Screenshot 1">
+    </div>
+    <div id="modal2" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.ibb.co/R2Hh118/images-4.jpg" alt="Game Screenshot 2">
+    </div>
+
+    <!-- قسم About This Game -->
+    <div class="article-container">
+        <h2>About This Game</h2>
+        <p>
+      Stardew Valley has been cited as one of the greatest games of all time. Yasuhiro Wada, the creator of Story of Seasons, praised the game for retaining the freedom that later entries of his series had lost. It is also one of the best-selling games of all time, selling 35 million by 2024.
+        </p>
+        <p>
+          Stardew Valley is a 2016 farm life simulation role-playing video game developed by Eric "ConcernedApe" Barone. Players take the role of a character who inherits their deceased grandfather's dilapidated farm in a place known as "Stardew Valley". The game was originally released for Windows in February 2016 before being ported to other platforms. Stardew Valley is an open-ended game, allowing players to grow crops, raise livestock, fish, cook, mine, forage, and socialize with the townspeople, including the ability to marry and have children. It allows up to eight players to play online together.
+        </p>
+    </div>
+</body>
+</html>
